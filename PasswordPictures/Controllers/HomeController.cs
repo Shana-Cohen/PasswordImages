@@ -24,6 +24,7 @@ namespace PasswordPictures.Controllers
         {
             _webHostEnvironment = webHostEnvironment;
         }
+
         public IActionResult Index()
         {
             return View();
@@ -45,7 +46,7 @@ namespace PasswordPictures.Controllers
             };
             newImage.Id = repo.AddImage(newImage);
             return View(newImage);
-;
+            ;
         }
 
         public IActionResult ViewImage(int id)
@@ -93,8 +94,8 @@ namespace PasswordPictures.Controllers
             }
             return Redirect($"/home/viewimage?id={id}");
         }
-
     }
+
     public static class SessionExtensionMethods
     {
         public static void Set<T>(this ISession session, string key, T value)

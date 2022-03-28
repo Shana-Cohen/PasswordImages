@@ -44,7 +44,7 @@ namespace PasswordPictures.Controllers
                 Views = 1
             };
             newImage.Id = repo.AddImage(newImage);
-            return View(new ImageViewModel { Password = password, Id = newImage.Id })
+            return View(newImage);
 ;
         }
 
